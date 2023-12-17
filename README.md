@@ -19,12 +19,12 @@ Dosyanın Formatı:
 {
   "cities": [
     {
-      "id": 1,
-      "name": "Adana",
-      "latitude": 37.0000,
-      "longitude": 35.3213,
-      "population": 2183167,
-      "region": "Akdeniz"
+      "id": Şehir kimliği (birincil anahtar)
+      "name": Şehir ismi
+      "latitude": Enlem koordinatı
+      "longitude": Boylam koordinatı
+      "population": Nüfus
+      "region": Bölge adı
     },
     ///Diğer şehirler...
   ]
