@@ -29,6 +29,7 @@ Programı derlemek ve çalıştırmak için aşağıdaki adımları takip edebil
 3. `./simulated_annealing_turkiye` komutu ile programı çalıştırın.
 
 ## Algoritma Açıklaması
+- `City`: Şehir verilerini temsil eden yapı (class)
 - `distance`: İki şehir arasındaki Öklid mesafesini hesaplayan fonksiyon
 - `calculateTourLength`: Bir turun toplam uzunluğunu hesaplayan fonksiyon
 - `createRandomTour`: Rastgele tur oluşturan fonksiyon
