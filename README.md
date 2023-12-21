@@ -5,30 +5,21 @@ Bu proje, C++ programlama dilinde Simulated Annealing algoritmasını kullanarak
 
 ## Kullanılan Teknolojiler ve Kütüphaneler
 - C++11 veya daha yeni bir sürümü destekleyen bir derleyici
-- `<iostream>`, `<vector>`, `<cmath>`, `<algorithm>`, `<random>`, `<fstreamm>` `<nlohmann/json.hpp>` gibi standart C++ kütüphaneleri `
+- `<iostream>`, `<vector>`, `<cmath>`, `<algorithm>`, `<random>`, `<fstreamm>` `<sstream>` gibi standart C++ kütüphaneleri `
 
 ## Proje Dosyaları
 - `simulated_annealing_turkiye.cpp`: Ana program dosyası
 - `cities_of_turkey.json`: Türkiye'de bulunan şehirlerin database dosyası
 
-  ## Şehir Veritabanı (cities_of_turkey.json)
-Bu proje, şehir verilerini içeren bir JSON dosyası olan `cities_of_turkey.json` kullanmaktadır. Bu dosya, her bir şehir için bir dizi özelliği içermektedir.
+  ## Şehir Veritabanı (cities_of_turkey.CSV)
+Bu proje, şehir verilerini içeren bir CSV dosyası olan `cities_of_turkey.csv` kullanmaktadır. Bu dosya, her bir şehir için bir dizi özelliği içermektedir.
 
 Dosyanın Formatı:
-```json
-{
-  "cities": [
-    {
-      "id": 1,
-      "name": "Adana",
-      "latitude": 37.0000,
-      "longitude": 35.3213,
-      "population": 2183167,
-      "region": "Akdeniz"
-    },
-    ///Diğer şehirler...
-  ]
-}
+```csv
+id,name,latitude,longitude,population,region
+
+1,Adana,37.0000,35.3213,2183167,Akdeniz
+//Diğer şehirler
 ```
 
 ## Kullanım
