@@ -5,7 +5,7 @@ Bu proje, C++ programlama dilinde Simulated Annealing algoritmasını kullanarak
 
 ## Kullanılan Teknolojiler ve Kütüphaneler
 - C++11 veya daha yeni bir sürümü destekleyen bir derleyici
-- `<iostream>`, `<vector>`, `<cmath>`, `<algorithm>`, `<random>` gibi standart C++ kütüphaneleri
+- `<iostream>`, `<vector>`, `<cmath>`, `<algorithm>`, `<random>`, `<fstreamm>` `<nlohmann/json.hpp>` gibi standart C++ kütüphaneleri `
 
 ## Proje Dosyaları
 - `simulated_annealing_turkiye.cpp`: Ana program dosyası
