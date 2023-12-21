@@ -44,9 +44,5 @@ Programı derlemek ve çalıştırmak için aşağıdaki adımları takip edebil
 - `readCitiesFromJson`: JSON dosyasındaki şehir verilerini okuyan fonksiyon
 - `simulatedAnnealing`: Simulated Annealing algoritmasını gerçekleştiren fonksiyon
 
-## Katkılar
-Katkıda bulunmak istiyorsanız, lütfen yeni bir dal (branch) oluşturun ve değişikliklerinizi orada yapın. Daha sonra bir çekme isteği (pull request) göndererek değişiklikleri incelememizi sağlayabilirsiniz.
-
-
 ## İletişim
 Proje ile ilgili herhangi bir sorunuz veya geri bildiriminiz varsa, lütfen bana [beslirum@gmail.com] üzerinden ulaşın.
