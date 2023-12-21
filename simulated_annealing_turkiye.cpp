@@ -4,10 +4,11 @@
 #include <algorithm>
 #include <random>
 #include <fstream>
-#include <cities_of_turkey/json.hpp>
+#include <nlohmann/json.hpp>
 
-using json = cities_of_turkey::json;
+using json = nlohmann::json;
 
+// Structure representing city data
 // Şehir verilerini temsil eden yapı
 struct City {
     int id;
@@ -15,11 +16,13 @@ struct City {
     double latitude, longitude;
 };
 
+// Function to calculate Euclidean distance between two cities
 // İki şehir arasındaki Öklid mesafesini hesaplayan fonksiyon
 double distance(const City& a, const City& b) {
     return std::sqrt(std::pow(a.latitude - b.latitude, 2) + std::pow(a.longitude - b.longitude, 2));
 }
 
+// Function to calculate the total length of a tour
 // Bir turun toplam uzunluğunu hesaplayan fonksiyon
 double calculateTourLength(const std::vector<City>& cities, const std::vector<int>& tour) {
     double totalDistance = 0.0;
@@ -31,6 +34,7 @@ double calculateTourLength(const std::vector<City>& cities, const std::vector<in
     return totalDistance;
 }
 
+// Function to create a random tour
 // Rastgele bir tur oluşturan fonksiyon
 std::vector<int> createRandomTour(int numberOfCities) {
     std::vector<int> tour(numberOfCities);
@@ -39,6 +43,7 @@ std::vector<int> createRandomTour(int numberOfCities) {
     return tour;
 }
 
+// Function to read city data from a JSON file
 // JSON dosyasındaki şehir verilerini okuyan fonksiyon
 std::vector<City> readCitiesFromJson(const std::string& jsonFileName) {
     std::ifstream ifs(jsonFileName);
@@ -63,6 +68,7 @@ std::vector<City> readCitiesFromJson(const std::string& jsonFileName) {
     return cities;
 }
 
+// Function implementing the Simulated Annealing algorithm
 // Simulated Annealing algoritmasını gerçekleştiren fonksiyon
 std::vector<int> simulatedAnnealing(const std::vector<City>& cities, double startTemp, double endTemp, double coolingRate) {
     std::random_device rd;
@@ -76,15 +82,18 @@ std::vector<int> simulatedAnnealing(const std::vector<City>& cities, double star
     while (currentTemp > endTemp) {
         auto newTour = currentTour;
 
+        // Randomly select two cities and swap their positions
         // Rastgele iki şehir seç ve yerlerini değiştir
         int swapIndex1 = dis(gen) * newTour.size();
         int swapIndex2 = dis(gen) * newTour.size();
         std::swap(newTour[swapIndex1], newTour[swapIndex2]);
 
+        // Calculate energy and compare
         // Enerjiyi hesapla ve karşılaştır
         double currentEnergy = calculateTourLength(cities, currentTour);
         double newEnergy = calculateTourLength(cities, newTour);
 
+        // Calculate acceptance probability
         // Kabul etme olasılığını hesapla
         if (newEnergy < currentEnergy || exp((currentEnergy - newEnergy) / currentTemp) > dis(gen)) {
             currentTour = newTour;
@@ -94,6 +103,7 @@ std::vector<int> simulatedAnnealing(const std::vector<City>& cities, double star
             }
         }
 
+        // Decrease the temperature
         // Sıcaklığı azalt
         currentTemp *= 1 - coolingRate;
     }
@@ -102,12 +112,15 @@ std::vector<int> simulatedAnnealing(const std::vector<City>& cities, double star
 }
 
 int main() {
+    // Read city data from the JSON file
     // JSON dosyasından şehir verilerini oku
     std::vector<City> cities = readCitiesFromJson("cities_of_turkey.json");
 
+    // Find the optimal tour using Simulated Annealing
     // Simulated Annealing ile minimum turu bul
     std::vector<int> optimalTour = simulatedAnnealing(cities, 1000.0, 0.01, 0.001);
 
+    // Print the results to the console
     // Sonuçları ekrana yazdır
     std::cout << "Optimal Tour: ";
     for (int cityIndex : optimalTour) {
@@ -117,4 +130,3 @@ int main() {
 
     return 0;
 }
-
