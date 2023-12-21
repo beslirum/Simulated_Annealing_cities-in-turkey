@@ -41,7 +41,7 @@ Programı derlemek ve çalıştırmak için aşağıdaki adımları takip edebil
 - `distance`: İki şehir arasındaki Öklid mesafesini hesaplayan fonksiyon
 - `calculateTourLength`: Bir turun toplam uzunluğunu hesaplayan fonksiyon
 - `createRandomTour`: Rastgele tur oluşturan fonksiyon
-- `readCitiesFromJson`: JSON dosyasındaki şehir verilerini okuyan fonksiyon
+- `readCitiesFromCSV`: CSV dosyasındaki şehir verilerini okuyan fonksiyon
 - `simulatedAnnealing`: Simulated Annealing algoritmasını gerçekleştiren fonksiyon
 
 ## İletişim
