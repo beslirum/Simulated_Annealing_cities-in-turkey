@@ -1,1 +1,85 @@
 
+id,name,latitude,longitude,population,region
+
+1,Adana,37.0000,35.3213,2183167,Akdeniz
+2,Adıyaman,37.7648,38.2786,602774,Güneydoğu Anadolu
+3,Afyonkarahisar,38.7507,30.5567,709015,Ege
+4,Ağrı,39.7191,43.0503,547210,Doğu Anadolu
+5,Amasya,40.6499,35.8353,322167,Karadeniz
+6,Ankara,39.9208,32.8541,5270575,İç Anadolu
+7,Antalya,36.8841,30.7056,2288456,Akdeniz
+8,Artvin,41.1828,41.8183,168370,Karadeniz
+9,Aydın,37.8560,27.8416,1053506,Ege
+10,Balıkesir,39.6484,27.8826,1186688,Ege
+11,Bilecik,40.0567,30.0665,212361,Marmara
+12,Bingöl,39.0626,40.7696,267184,Doğu Anadolu
+13,Bitlis,38.3938,42.1232,267184,Doğu Anadolu
+14,Bolu,40.5760,31.5788,291095,Karadeniz
+15,Burdur,37.4613,30.0665,258339,Akdeniz
+16,Bursa,40.2669,29.0634,2842547,Marmara
+17,Çanakkale,40.1553,26.4142,513341,Marmara
+18,Çankırı,40.6013,33.6134,180945,İç Anadolu
+19,Çorum,40.5506,34.9556,525180,Karadeniz
+20,Denizli,37.7765,29.0864,993442,Ege
+21,Diyarbakır,37.9144,40.2306,1654196,Güneydoğu Anadolu
+22,Edirne,41.6818,26.5623,402537,Marmara
+23,Elâzığ,38.6810,39.2264,574304,Doğu Anadolu
+24,Erzincan,39.7500,39.5000,222918,Doğu Anadolu
+25,Erzurum,39.9000,41.2700,762321,Doğu Anadolu
+26,Eskişehir,39.7767,30.5206,826716,İç Anadolu
+27,Gaziantep,37.0662,37.3833,1931836,Güneydoğu Anadolu
+28,Giresun,40.9128,38.3895,426686,Karadeniz
+29,Gümüşhane,40.4386,39.5086,151449,Karadeniz
+30,Hakkâri,37.5833,43.7333,278775,Doğu Anadolu
+31,Hatay,36.4018,36.3498,1533507,Akdeniz
+32,Isparta,37.7648,30.5566,421766,Akdeniz
+33,Mersin,36.8000,34.6333,1745221,Akdeniz
+34,İstanbul,41.0053,28.9770,14657434,Marmara
+35,İzmir,38.4189,27.1287,4168415,Ege
+36,Kars,40.6167,43.1000,292660,Doğu Anadolu
+37,Kastamonu,41.3887,33.7827,372633,Karadeniz
+38,Kayseri,38.7312,35.4787,1341056,İç Anadolu
+39,Kırklareli,41.7333,27.2167,346973,Marmara
+40,Kırşehir,39.1425,34.1709,225562,İç Anadolu
+41,Kocaeli,40.8533,29.8815,1780055,Marmara
+42,Konya,37.8667,32.4833,2130544,İç Anadolu
+43,Kütahya,39.4167,29.9833,571463,Ege
+44,Malatya,38.3552,38.3095,772904,Doğu Anadolu
+45,Manisa,38.6191,27.4289,1380366,Ege
+46,Kahramanmaraş,37.5858,36.9371,1096610,Akdeniz
+47,Mardin,37.3212,40.7245,796591,Güneydoğu Anadolu
+48,Muğla,37.2153,28.3636,908877,Ege
+49,Muş,38.9462,41.7539,408728,Doğu Anadolu
+50,Nevşehir,38.6939,34.6857,286767,İç Anadolu
+51,Niğde,37.9667,34.6833,346114,İç Anadolu
+52,Ordu,40.9839,37.8764,728949,Karadeniz
+53,Rize,41.0201,40.5234,328979,Karadeniz
+54,Sakarya,40.6940,30.4358,953181,Marmara
+55,Samsun,41.2928,36.3313,1279884,Karadeniz
+56,Siirt,37.9333,41.9500,320351,Güneydoğu Anadolu
+57,Sinop,42.0231,35.1531,204133,Karadeniz
+58,Sivas,39.7477,37.0179,618617,İç Anadolu
+59,Tekirdağ,40.9833,27.5167,937910,Marmara
+60,Tokat,40.3167,36.5500,593990,Karadeniz
+61,Trabzon,41.0015,39.7178,768417,Karadeniz
+62,Tunceli,39.3074,39.4388,86076,Doğu Anadolu
+63,Şanlıurfa,37.1591,38.7969,1892320,Güneydoğu Anadolu
+64,Uşak,38.6823,29.4082,353048,Ege
+65,Van,38.4891,43.4089,1096397,Doğu Anadolu
+66,Yozgat,39.8181,34.8147,419440,İç Anadolu
+67,Zonguldak,41.4564,31.7987,595907,Karadeniz
+68,Aksaray,38.3687,34.0370,386514,İç Anadolu
+69,Bayburt,40.2552,40.2249,78550,Karadeniz
+70,Karaman,37.1759,33.2287,242196,İç Anadolu
+71,Kırıkkale,39.8468,33.5153,270271,İç Anadolu
+72,Batman,37.8812,41.1351,566633,Güneydoğu Anadolu
+73,Şırnak,37.4187,42.4918,490184,Güneydoğu Anadolu
+74,Bartın,41.5811,32.4610,190708,Karadeniz
+75,Ardahan,41.1105,42.7022,99265,Doğu Anadolu
+76,Iğdır,39.8880,44.0048,192435,Doğu Anadolu
+77,Yalova,40.6500,29.2667,233009,Marmara
+78,Karabük,41.2061,32.6204,236978,Karadeniz
+79,Kilis,36.7184,37.1212,130655,Güneydoğu Anadolu
+80,Osmaniye,37.2130,36.1763,512873,Akdeniz
+81,Düzce,40.8438,31.1565,360388,Karadeniz
+
