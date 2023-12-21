@@ -5,6 +5,9 @@
 #include <random>
 #include <fstream>
 #include <sstream>
+#include <format>
+#include <cstdlib>
+#include <xutility>
 
 
 // Structure representing city data
