@@ -4,9 +4,8 @@
 #include <algorithm>
 #include <random>
 #include <fstream>
-#include <nlohmann/json.hpp>
+#include <sstream>
 
-using json = nlohmann::json;
 
 // Structure representing city data
 // Şehir verilerini temsil eden yapı
@@ -43,26 +42,36 @@ std::vector<int> createRandomTour(int numberOfCities) {
     return tour;
 }
 
-// Function to read city data from a JSON file
-// JSON dosyasındaki şehir verilerini okuyan fonksiyon
-std::vector<City> readCitiesFromJson(const std::string& jsonFileName) {
-    std::ifstream ifs(jsonFileName);
+// Function to read city data from a CSV file
+// CSV dosyasındaki şehir verilerini okuyan fonksiyon
+std::vector<City> readCitiesFromCSV(const std::string& csvFileName) {
+    std::ifstream ifs(csvFileName);
     if (!ifs.is_open()) {
-        std::cerr << "Error opening file: " << jsonFileName << std::endl;
+        std::cerr << "Error opening file: " << csvFileName << std::endl;
         exit(EXIT_FAILURE);
     }
 
-    json jsonData;
-    ifs >> jsonData;
 
     std::vector<City> cities;
-    for (const auto& cityData : jsonData["cities"]) {
-        cities.push_back({
-            cityData["id"],
-            cityData["name"],
-            cityData["latitude"],
-            cityData["longitude"]
-        });
+    std::string line;
+    std::getline(ifs, line); // İlk satırı atla (başlık satırı)
+
+    while (std::getline(ifs, line)) {
+        std::istringstream iss(line);
+        std::string token;
+
+        City city;
+        std::getline(iss, token, ','); // Virgülle ayrılmış verileri oku
+        city.id = std::stoi(token);
+
+        std::getline(iss, city.name, ',');
+        std::getline(iss, token, ',');
+        city.latitude = std::stod(token);
+
+        std::getline(iss, token);
+        city.longitude = std::stod(token);
+
+        cities.push_back(city);
     }
 
     return cities;
@@ -112,9 +121,9 @@ std::vector<int> simulatedAnnealing(const std::vector<City>& cities, double star
 }
 
 int main() {
-    // Read city data from the JSON file
-    // JSON dosyasından şehir verilerini oku
-    std::vector<City> cities = readCitiesFromJson("cities_of_turkey.json");
+    // Read city data from the CSV file
+    // CSV dosyasından şehir verilerini oku
+    std::vector<City> cities = readCitiesFromCSV("cities_of_turkey.csv");
 
     // Find the optimal tour using Simulated Annealing
     // Simulated Annealing ile minimum turu bul
